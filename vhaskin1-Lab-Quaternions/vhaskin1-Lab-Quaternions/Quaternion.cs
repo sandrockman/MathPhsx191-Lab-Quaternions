@@ -140,9 +140,9 @@ class Quaternion
     {
         Quaternion p = new Quaternion(point);
         Quaternion q = new Quaternion(Math.Cos(theta / 2), (Math.Sin(theta / 2) & !axis));
-        Quaternion qStar = Quaternion.GetConjugate(q);
+        Quaternion qInverse = !q;
 
-        Quaternion pDash = (q * (p * qStar));
+        Quaternion pDash = (q * (p * qInverse));
         return pDash;
     }
 }
