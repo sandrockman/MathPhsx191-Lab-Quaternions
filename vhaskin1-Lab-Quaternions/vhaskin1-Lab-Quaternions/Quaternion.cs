@@ -18,7 +18,10 @@ class Quaternion
     public Quaternion(Vector3D point)
     {
         a = 0;
-        vector = new Vector3D(point.XValue, point.YValue, point.ZValue, point.WValue);
+        vector = new Vector3D(point.XValue, 
+                              point.YValue, 
+                              point.ZValue, 
+                              point.WValue);
     }
 
     public Quaternion(double newA, Vector3D newVector)    {
